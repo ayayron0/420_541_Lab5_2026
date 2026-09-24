@@ -19,6 +19,10 @@ public class PlayerMovement : MonoBehaviour
     private float turnInput;            // horizontal input for rotation
     private bool isGrounded;            // true when standing on the ground
     private bool jumpRequested = false; // set in Update(), used later
+    // Lets other scripts READ isGrounded, but not change it.
+    // "=> isGrounded" means "when asked, return isGrounded".
+    public bool IsGrounded => isGrounded;
+
     // The methods from the next steps go here, inside the class
 
 
